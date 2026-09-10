@@ -11,16 +11,19 @@ lab-01-pendulum.html    a fully worked example lab (table + chart + predictor + 
 style.css               shared styling
 script.js               pendulum demo, chart rendering, predictor logic
 data/pendulum_data.csv  sample data file, linked as a download from lab-01
+images/                 toast, avocado, and egg artwork used by the toast game
 ```
 
 ## The lab page is a game
 
 Each lab page has five click-to-open sections — Purpose, Procedure, Data/Results,
 Error Analysis, Conclusion. Opening a section for the first time adds a
-topping to the toast graphic on the right (bread → butter → jam → honey →
-cherry) and fires a little popup notification. All the game logic lives in
-`initToastGame()` in `script.js` — it reads each button's `data-layer` and
-`data-note` attributes, so you don't need to touch the JS to reuse it.
+layer to the avocado toast graphic on the right (toast → avocado → egg →
+chili flakes → microgreens) and fires a little popup notification. All the
+game logic lives in `initToastGame()` in `script.js` — it reads each button's
+`data-layer` and `data-note` attributes, so you don't need to touch the JS to
+reuse it. The toast/avocado/egg artwork lives in `images/`; the chili and
+microgreen flourishes are small inline SVGs in each lab page.
 
 ## Adding a new lab
 
@@ -34,9 +37,9 @@ cherry) and fires a little popup notification. All the game logic lives in
    XLSX, anything.
 5. Add a new `<li>` to the `lab-log` list in `index.html` linking to the new page.
 
-The toast SVG, the accordion CSS, and `initToastGame()` are all shared —
-you never need to duplicate that part, just keep the same button structure
-(`data-layer` + `data-note` attributes) in the new file.
+The toast graphic markup, the accordion CSS, and `initToastGame()` are all
+shared — you never need to duplicate that part, just keep the same button
+structure (`data-layer` + `data-note` attributes) in the new file.
 
 ## Deploying to Vercel (free)
 

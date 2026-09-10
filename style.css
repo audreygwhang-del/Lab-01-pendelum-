@@ -412,6 +412,42 @@ tbody tr:nth-child(even) { background: #f7f8f7; }
 
 .toast-plate-col svg { width: 170px; height: auto; }
 
+.toast-stack {
+  position: relative;
+  width: 190px;
+  aspect-ratio: 1 / 1;
+}
+
+.toast-plate {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+  width: 84%;
+  height: 9%;
+  background: var(--white);
+  border: 2px solid var(--paper-line);
+  border-radius: 50%;
+}
+
+.toast-img {
+  position: absolute;
+  height: auto;
+  display: block;
+}
+
+.toast-stack svg.toast-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.toast-img-bread { left: 2%; top: 8.4%; width: 96%; }
+.toast-img-guac  { left: 17.2%; top: 28.4%; width: 65.4%; }
+.toast-img-egg   { left: 32.2%; top: 35.8%; width: 39.6%; }
+
 .toast-layer {
   opacity: 0;
   transform: translateY(6px) scale(0.9);

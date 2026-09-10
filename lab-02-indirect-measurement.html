@@ -39,7 +39,7 @@
       <p class="toast-progress" id="toastProgress"><b>0/5</b> toppings added</p>
 
       <div class="accordion-item">
-        <button class="accordion-trigger" aria-expanded="false" data-layer="layerBread" data-note="🍞 <b>Toast base added</b><br>Goal: calculate Earth's mass within a factor of 10 of the accepted value.">
+        <button class="accordion-trigger" aria-expanded="false" data-layer="layerToast" data-note="🍞 <b>Toast added</b><br>Goal: calculate Earth's mass within a factor of 10 of the accepted value.">
           <span class="topping-icon">🎯</span> Purpose <span class="check">done</span>
         </button>
         <div class="accordion-panel">
@@ -56,7 +56,7 @@
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-trigger" aria-expanded="false" data-layer="layerButter" data-note="🧈 <b>Butter added</b><br>Switched from stopwatch to slo-mo timing partway through.">
+        <button class="accordion-trigger" aria-expanded="false" data-layer="layerGuac" data-note="🥑 <b>Avocado mashed on</b><br>Switched from stopwatch to slo-mo timing partway through.">
           <span class="topping-icon">📋</span> Procedure <span class="check">done</span>
         </button>
         <div class="accordion-panel">
@@ -75,7 +75,7 @@
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-trigger" aria-expanded="false" data-layer="layerJam" data-note="🍓 <b>Jam spread on</b><br>Slo-mo trial gave g = 9.1 m/s&sup2;, closest to the accepted value.">
+        <button class="accordion-trigger" aria-expanded="false" data-layer="layerEgg" data-note="🍳 <b>Egg layered on</b><br>Slo-mo trial gave g = 9.1 m/s&sup2;, closest to the accepted value.">
           <span class="topping-icon">📊</span> Data / Results <span class="check">done</span>
         </button>
         <div class="accordion-panel">
@@ -108,7 +108,7 @@
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-trigger" aria-expanded="false" data-layer="layerHoney" data-note="🍯 <b>Honey drizzled</b><br>Stopwatch reaction time was the biggest error source.">
+        <button class="accordion-trigger" aria-expanded="false" data-layer="layerChili" data-note="🌶️ <b>Chili flakes added</b><br>Stopwatch reaction time was the biggest error source.">
           <span class="topping-icon">⚠️</span> Error Analysis <span class="check">done</span>
         </button>
         <div class="accordion-panel">
@@ -131,7 +131,7 @@
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-trigger" aria-expanded="false" data-layer="layerCherry" data-note="🍒 <b>Cherry on top</b><br>Hypothesis confirmed — within a factor of 10 of Earth's true mass.">
+        <button class="accordion-trigger" aria-expanded="false" data-layer="layerHerbs" data-note="🌿 <b>Microgreens finished</b><br>Hypothesis confirmed — within a factor of 10 of Earth's true mass.">
           <span class="topping-icon">✅</span> Conclusion <span class="check">done</span>
         </button>
         <div class="accordion-panel">
@@ -144,36 +144,37 @@
     </div>
 
     <div class="toast-plate-col">
-      <svg id="toastSVG" viewBox="0 0 140 150" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="70" cy="132" rx="58" ry="10" fill="#ffffff" stroke="#d4dbd6" stroke-width="2"/>
+      <div class="toast-stack">
+        <div class="toast-plate"></div>
 
-        <g id="layerBread" class="toast-layer">
-          <rect x="15" y="30" width="110" height="90" rx="18" fill="#d9a15b" stroke="#8b5a2b" stroke-width="3"/>
-          <rect x="28" y="43" width="84" height="64" rx="10" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-opacity="0.35"/>
-        </g>
+        <img id="layerToast" class="toast-layer toast-img toast-img-bread" src="images/toast_layer.webp" alt="" />
 
-        <g id="layerButter" class="toast-layer">
-          <path d="M40,55 Q55,40 75,50 Q95,42 100,60 Q90,75 70,68 Q50,78 40,55 Z" fill="#f5de8a" stroke="#e0c15a" stroke-width="1.5"/>
-        </g>
+        <img id="layerGuac" class="toast-layer toast-img toast-img-guac" src="images/guac_layer.webp" alt="" />
 
-        <g id="layerJam" class="toast-layer">
-          <path d="M35,75 Q55,60 80,72 Q105,68 100,90 Q80,100 55,95 Q35,95 35,75 Z" fill="#a3294f" opacity="0.9"/>
-          <circle cx="55" cy="80" r="2" fill="#6e1a37"/>
-          <circle cx="70" cy="88" r="2" fill="#6e1a37"/>
-          <circle cx="85" cy="78" r="2" fill="#6e1a37"/>
-          <circle cx="62" cy="92" r="1.6" fill="#6e1a37"/>
-        </g>
+        <img id="layerEgg" class="toast-layer toast-img toast-img-egg" src="images/egg_layer.webp" alt="" />
 
-        <g id="layerHoney" class="toast-layer">
-          <path d="M25,55 Q40,70 30,85 Q55,75 50,95 Q75,80 70,100 Q95,90 95,105" fill="none" stroke="#d98c1f" stroke-width="3" stroke-linecap="round"/>
-        </g>
+        <svg id="layerChili" class="toast-layer toast-img-chili" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#c23b1c">
+            <rect x="222" y="228" width="7" height="4" rx="1" transform="rotate(20 225 230)"/>
+            <rect x="245" y="215" width="6" height="4" rx="1" transform="rotate(-15 248 217)"/>
+            <rect x="270" y="222" width="7" height="4" rx="1" transform="rotate(40 273 224)"/>
+            <rect x="290" y="240" width="6" height="4" rx="1" transform="rotate(-25 293 242)"/>
+            <rect x="255" y="260" width="7" height="4" rx="1" transform="rotate(10 258 262)"/>
+            <rect x="235" y="248" width="6" height="4" rx="1" transform="rotate(-40 238 250)"/>
+            <rect x="278" y="262" width="6" height="4" rx="1" transform="rotate(60 281 264)"/>
+          </g>
+        </svg>
 
-        <g id="layerCherry" class="toast-layer">
-          <line x1="70" y1="45" x2="75" y2="35" stroke="#4a7c3c" stroke-width="2"/>
-          <circle cx="70" cy="50" r="7" fill="#b3122b" stroke="#7a0c1c" stroke-width="1.5"/>
-        </g>
-      </svg>
-      <span style="font-family:var(--mono); font-size:0.75rem; color:var(--ink-soft);">your toast</span>
+        <svg id="layerHerbs" class="toast-layer toast-img-herbs" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#3f7a3a" stroke-width="1.5" fill="#6bae4f">
+            <path d="M188,232 q-14,-4 -16,-18 q14,2 18,14 q2,4 -2,4 Z"/>
+            <path d="M318,238 q14,-6 14,-20 q-14,4 -16,16 q-1,4 2,4 Z"/>
+            <path d="M245,196 q-4,-13 6,-22 q8,10 4,22 q-2,4 -10,0 Z"/>
+            <path d="M300,200 q10,-9 8,-22 q-11,6 -12,18 q-1,4 4,4 Z"/>
+          </g>
+        </svg>
+      </div>
+      <span style="font-family:var(--mono); font-size:0.75rem; color:var(--ink-soft);">your avocado toast</span>
     </div>
   </div>
 
